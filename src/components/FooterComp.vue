@@ -1,7 +1,7 @@
 <template>
-  <div class="max-w-5xl mx-auto p-2 pb-0">
+  <footer class="max-w-5xl mx-auto p-2 pb-0">
     <div class="bg-secondary rounded-t p-2">
-      <div class="flex">
+      <div class="flex max-sm:flex-col">
         <div class="w-full relative">
           <h4>
             <b class="text-xl">
@@ -11,8 +11,8 @@
             © 2024 <span> | </span><i class="opacity-75">{{ "V 0.1" }}</i>
           </h4>
           <p class="text-sm">
-            Created from my
-            <Icon icon="mingcute:heart-fill" class="text-lg inline" /> with the help of my spouse
+            Created with
+            <Icon icon="mingcute:heart-fill" class="text-lg inline" /> and support from my spouse ^w^
           </p>
         </div>
         <div class="w-full">
@@ -36,7 +36,7 @@
         </a>
       </p>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script setup>

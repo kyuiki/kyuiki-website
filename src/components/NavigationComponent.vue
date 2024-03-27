@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky top-0 p-2 z-10 bg-gradient-to-b from-background to-transparent">
+  <nav class="sticky top-0 p-2 z-10 bg-gradient-to-b from-background to-transparent">
     <div
       v-motion
       :initial="{
@@ -81,7 +81,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script setup>

@@ -1,5 +1,5 @@
 <template>
-  <div
+  <section
     class="relative"
     v-motion
     :initial="{
@@ -60,7 +60,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
