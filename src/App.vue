@@ -1,4 +1,5 @@
 <script setup>
+  // If unfinished checked, It will be there :3
   const checkDev = import.meta.env.VITE_ISUNFINISHED;
 </script>
 

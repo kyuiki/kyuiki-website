@@ -1,7 +1,7 @@
 <template>
-  <div class="p-2 mx-auto max-w-5xl">
-    <p class="text-5xl">Timmy</p>
-    <p>Kyuiki</p>
+  <div class="p-2 mx-auto max-w-5xl relative z-10">
+    <p class="text-5xl">About Me</p>
+    <Separator></Separator>
   </div>
 </template>
 
