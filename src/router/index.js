@@ -13,8 +13,23 @@ const router = createRouter({
           component: HomeView
         },
         {
+          path: "diary",
+          component: () => import("../views/DiaryView.vue")
+        },
+        {
           path: "furry",
           component: () => import("../views/AboutView.vue")
+        }
+      ]
+    },
+    // /@[id] with AtParamsView
+    {
+      path: "/@:id",
+      component: () => import("../layouts/AtParamLayout.vue"),
+      children: [
+        {
+          path: "",
+          component: () => import("../views/AtParamsView.vue")
         }
       ]
     }
