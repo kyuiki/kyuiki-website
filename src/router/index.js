@@ -13,12 +13,22 @@ const router = createRouter({
           component: HomeView
         },
         {
+          path: "diary",
+          component: () => import("../views/DiaryView.vue")
+        },
+        {
           path: "furry",
           component: () => import("../views/AboutView.vue")
-        },
-        // @param path
+        }
+      ]
+    },
+    // /@[id] with AtParamsView
+    {
+      path: "/@:id",
+      component: () => import("../layouts/AtParamLayout.vue"),
+      children: [
         {
-          path: "@:id",
+          path: "",
           component: () => import("../views/AtParamsView.vue")
         }
       ]

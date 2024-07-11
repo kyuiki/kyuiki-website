@@ -1,5 +1,8 @@
 <template>
-  <nav class="sticky top-0 p-2 z-10 bg-gradient-to-b from-background to-transparent">
+  <nav
+    class="sticky p-2 z-10 from-background to-transparent"
+    :class="top ? 'bg-gradient-to-b top-0' : 'bg-gradient-to-t bottom-0'"
+  >
     <div
       v-motion
       :initial="{
@@ -85,9 +88,13 @@
 </template>
 
 <script setup>
+  import { defineProps } from "vue";
+
+  const { top } = defineProps(["top"]);
+
   const navs = [
     { name: "Home", icon: "home-2-fill", path: "/" },
-    { name: "Blog", icon: "book-5-fill", path: "/" },
+    { name: "Diary", icon: "book-5-fill", path: "/diary" },
     { name: "Furry", icon: "cat-fill", path: "/furry" }
   ];
 </script>
