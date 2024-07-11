@@ -15,6 +15,11 @@ const router = createRouter({
         {
           path: "furry",
           component: () => import("../views/AboutView.vue")
+        },
+        // @param path
+        {
+          path: "@:id",
+          component: () => import("../views/AtParamsView.vue")
         }
       ]
     }
