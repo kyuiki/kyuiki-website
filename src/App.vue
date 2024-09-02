@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div class="p-2 bg-red-800 text-white" v-if="checkDev">
+  <div class="p-2 bg-red-800 text-white contain-paint" v-if="checkDev">
     <div class="max-w-5xl mx-auto">
       <p class="font-bold">This website is currently unfinished!</p>
       <p>
