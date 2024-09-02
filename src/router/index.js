@@ -17,12 +17,53 @@ const router = createRouter({
           component: () => import("../views/DiaryView.vue")
         },
         {
+          path: "privacy",
+          component: () => import("../views/legal/PrivacyPolicyView.vue")
+        },
+        {
           path: "furry",
           component: () => import("../views/AboutView.vue")
+        },
+        {
+          path: "p/:handle",
+          component: () => import("../views/PostView.vue")
+        },
+        {
+          path: "u/:username",
+          component: () => import("../views/UserView.vue")
         }
       ]
     },
+
     // /@[id] with AtParamsView
+    {
+      path: "/@card",
+      component: () => import("../layouts/AtParamLayout.vue"),
+      children: [
+        {
+          path: "",
+          component: () => import("../views/AtCardView.vue")
+        }
+      ]
+    },
+    {
+      path: "/@fun",
+      component: () => import("../layouts/AtParamLayout.vue"),
+      children: [
+        {
+          path: "",
+          component: () => import("../views/AtCardView.vue")
+        },
+        {
+          path: "fluffychat",
+          component: () => import("../views/Fun/FluffyChatView.vue")
+        },
+        {
+          path: "plinko",
+          component: () => import("../views/Fun/PlinkoView.vue")
+        }
+      ]
+    },
     {
       path: "/@:id",
       component: () => import("../layouts/AtParamLayout.vue"),
@@ -30,6 +71,16 @@ const router = createRouter({
         {
           path: "",
           component: () => import("../views/AtParamsView.vue")
+        }
+      ]
+    },
+    import.meta.env.VITE_ISLOCAL === "1" && {
+      path: "/private",
+      component: () => import("../layouts/BlankLayout.vue"),
+      children: [
+        {
+          path: "",
+          component: () => import("../views/private/InvoiceView.vue")
         }
       ]
     }

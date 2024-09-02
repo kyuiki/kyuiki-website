@@ -40,5 +40,8 @@
 </template>
 
 <script setup>
+  import { useAuthStore } from "@/stores/authentication";
+
+  const authStore = useAuthStore();
   const checkDev = import.meta.env.VITE_ISUNFINISHED;
 </script>
