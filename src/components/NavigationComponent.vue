@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="sticky p-2 z-10 from-background to-transparent"
+    class="sticky p-2 z-20 from-background to-transparent"
     :class="top ? 'bg-gradient-to-b top-0' : 'bg-gradient-to-t bottom-0'"
   >
     <div

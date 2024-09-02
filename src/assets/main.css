@@ -7,7 +7,8 @@
 body,
 html {
   font-family: "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  contain: paint;
+  /* contain: paint; */
+  min-height: 100vh;
 }
 
 .bg-pattern {
