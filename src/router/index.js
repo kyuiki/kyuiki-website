@@ -59,8 +59,28 @@ const router = createRouter({
           component: () => import("../views/Fun/FluffyChatView.vue")
         },
         {
+          path: "rambley",
+          component: () => import("../views/Fun/RambleyLikeTestView.vue")
+        },
+        {
           path: "plinko",
           component: () => import("../views/Fun/PlinkoView.vue")
+        },
+        {
+          path: "spectrumtier",
+          component: () => import("../views/Fun/SpectrumTierListView.vue")
+        },
+        {
+          path: "nbt",
+          component: () => import("../views/Fun/NBTEditorView.vue")
+        },
+        {
+          path: "tes",
+          component: () => import("../views/Fun/DivTestView.vue")
+        },
+        {
+          path: "wiz",
+          component: () => import("../views/Fun/WizLightControlView.vue")
         }
       ]
     },
@@ -71,6 +91,20 @@ const router = createRouter({
         {
           path: "",
           component: () => import("../views/AtParamsView.vue")
+        }
+      ]
+    },
+    import.meta.env.VITE_ISLOCAL === "1" && {
+      path: "/private",
+      component: () => import("../layouts/BlankLayout.vue"),
+      children: [
+        {
+          path: "",
+          component: () => import("../views/private/InvoiceView.vue")
+        },
+        {
+          path: "pr",
+          component: () => import("../views/private/PRView.vue")
         }
       ]
     }

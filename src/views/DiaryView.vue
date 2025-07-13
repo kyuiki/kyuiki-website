@@ -88,6 +88,11 @@
     },
     {
       title: "Lorem ipsum dolor sit amet consectetur adipisicing elit Aliquid.",
+      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, quos.",
+      image: "/kyuiki_anime.png"
+    },
+    {
+      title: "Lorem ipsum dolor sit amet consectetur adipisicing elit Aliquid.",
       content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, quos."
     }
   ]);

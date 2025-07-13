@@ -60,6 +60,7 @@
           >
             <p class="mt-2">Thank you for checking out x3 But seems like you are not from the QR!</p>
             <p class="mt-2">Mind to type the card version for me?</p>
+            <p class="opacity-25">{{ md5(password) }}</p>
             <div class="mt-6">
               <input
                 v-model="password"
@@ -94,11 +95,7 @@
       </div>
     </div>
     <div v-if="passwordChecker" class="px-4 mt-16">
-      <h1 class="text-center font-bold text-2xl">Hi! Welcome to my card</h1>
-      <div class="mt-4">
-        <p>Unfortunately it's not done yet :( I'm so sorryy!!</p>
-        <p>But there will be surprise at [[date.countDown()]]</p>
-      </div>
+      <MainGeneratorComp />
     </div>
   </div>
 </template>
@@ -107,12 +104,17 @@
   import { useRoute } from "vue-router";
   import { ref, onMounted, computed } from "vue";
   import md5 from "@/utils/md5.js";
+  import MainGeneratorComp from "@/components/BioModules/MainGeneratorComp.vue";
 
   const route = useRoute();
+  const passList = ref([
+    "5a7d02f0f0185674af2b224444278d4e", //emission 24
+    "be9fd78745708aff03720b1041c9edd3" //emission 25
+  ]);
   console.log(route.query);
   const password = ref(route.query.v);
   const passwordChecker = computed(() => {
-    if (md5(password.value || "") == "5a7d02f0f0185674af2b224444278d4e") return true;
+    if (passList.value.includes(md5(password.value || ""))) return true;
     return false;
     // return /^[0-9]{2}v[0-9]{2}[a-f]$/gi.test(password.value);
     // No Comment
