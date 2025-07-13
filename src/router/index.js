@@ -94,20 +94,20 @@ const router = createRouter({
         }
       ]
     },
-    import.meta.env.VITE_ISLOCAL === "1" && {
-      path: "/private",
-      component: () => import("../layouts/BlankLayout.vue"),
-      children: [
-        {
-          path: "",
-          component: () => import("../views/private/InvoiceView.vue")
-        },
-        {
-          path: "pr",
-          component: () => import("../views/private/PRView.vue")
-        }
-      ]
-    }
+    // import.meta.env.VITE_ISLOCAL === "1" && {
+    //   path: "/private",
+    //   component: () => import("../layouts/BlankLayout.vue"),
+    //   children: [
+    //     // {
+    //     //   path: "",
+    //     //   component: () => import("../views/private/InvoiceView.vue")
+    //     // },
+    //     // {
+    //     //   path: "pr",
+    //     //   component: () => import("../views/private/PRView.vue")
+    //     // }
+    //   ]
+    // }
   ]
 });
 
