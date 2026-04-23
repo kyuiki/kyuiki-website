@@ -81,6 +81,18 @@ const router = createRouter({
         {
           path: "wiz",
           component: () => import("../views/Fun/WizLightControlView.vue")
+        },
+        // {
+        //   path: "mcbot",
+        //   component: () => import("../views/Fun/MCBotView.vue")
+        // },
+        // {
+        //   path: "mcstock",
+        //   component: () => import("../views/Fun/MineStockView.vue")
+        // },
+        {
+          path: "timepoint",
+          component: () => import("../views/Fun/TimePointView.vue")
         }
       ]
     },
@@ -94,20 +106,22 @@ const router = createRouter({
         }
       ]
     },
-    // import.meta.env.VITE_ISLOCAL === "1" && {
-    //   path: "/private",
-    //   component: () => import("../layouts/BlankLayout.vue"),
-    //   children: [
-    //     // {
-    //     //   path: "",
-    //     //   component: () => import("../views/private/InvoiceView.vue")
-    //     // },
-    //     // {
-    //     //   path: "pr",
-    //     //   component: () => import("../views/private/PRView.vue")
-    //     // }
-    //   ]
-    // }
+    // ...(import.meta.env.VITE_ISLOCAL === "1"
+    //   ? [{
+    //     path: "/private",
+    //     component: () => import("../layouts/BlankLayout.vue"),
+    //     children: [
+    //       {
+    //         path: "",
+    //         component: () => import("../views/private/InvoiceView.vue")
+    //       },
+    //       {
+    //         path: "pr",
+    //         component: () => import("../views/private/PRView.vue")
+    //       }
+    //     ]
+    //   }]
+    //   : [])
   ]
 });
 
